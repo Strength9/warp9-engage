@@ -1,0 +1,15 @@
+{
+    "name": "BlockSLUG",
+    "title": "BlockTITLE",
+    "description": "BlockDESCRIPTION",
+    "category": "BlockCATEGORY",
+    "apiVersion": 2,
+    "style": BlockSTYLE,
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "BlockRENDER"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

@@ -1,0 +1,20 @@
+<?php
+/**
+ * Block Name: BlockTITLE
+ * Description: BlockDescription
+ */
+
+$block = $args['block']; // The block attributes
+$data = $args['data']; // The block data
+$block_id = $args['block_id']; // The block ID
+$class_name = $args['class_name']; // The block class names
+?>
+
+<section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?>">
+    <p>BLock - BlockTITLE has been created</p>
+    <?php
+        if ( $data['example_field']) {
+            echo "<p>" . $data['example_field'] . "</p>";
+        }
+    ?>
+</section>

@@ -1,0 +1,40 @@
+<?php
+/**
+ * BlockTITLE
+ */
+
+// Dynamic block ID
+$block_id = 'BlockSLUG-' . $block['id'];
+
+// Check if a custom ID is set in the block editor
+if( !empty($block['anchor']) ) { $block_id = $block['anchor']; }
+
+// Block classes
+$class_name = 'BlockSLUG';
+if( !empty($block['class_name']) ) { $class_name .= ' ' . $block['class_name']; }
+
+// $data fields 
+// Add acf fields here
+$data = array(
+	'example_field' => get_field( 'example_field' ) 
+);
+
+
+
+/* Pass the block data into the template part */ 
+
+get_template_part(
+	'blocks/BlockSLUG/template',
+	null,
+	array(
+		'block'      => $block,
+		'is_preview' => $is_preview,
+		'post_id'    => $post_id,
+
+		'data'       => $data,
+        'class_name' => $class_name,
+        'block_id'   => $block_id,
+	)
+);
+
+?>
